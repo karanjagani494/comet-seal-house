@@ -1,0 +1,17 @@
+import { Link } from "react-router-dom";
+import { ProductGrid } from "@/components/catalogue/ProductGrid";
+import { products } from "@/lib/catalogue";
+
+export const LandingPage = () => (
+<>
+<div className="hero container">
+<div className="hero-copy"><p className="eyebrow"><span></span> BUILT AROUND PRECISION</p><h1>A better seal.<br />A stronger<br /><em>connection.</em></h1><p className="hero-description">Sealing solutions for the machines that keep your world moving. Explore mechanical, carbon, water-pump, and automotive seals.</p><div className="hero-actions"><Link className="button primary" to="/products">Explore Products <span>↗</span></Link><Link className="text-link" to="/about-us">Meet Comet <span>→</span></Link></div><div className="hero-footnote"><span className="small-cross">✳</span><p>Industrial focus. Personal attention.<br /><strong>Comet Seal House · Rajkot, Gujarat</strong></p></div></div>
+<div className="hero-visual"><div className="visual-top"><span>THE DETAILS MAKE THE DIFFERENCE</span><span>01 / 04</span></div><div className="orbit orbit-one"></div><div className="orbit orbit-two"></div><div className="crosshair crosshair-one">+</div><div className="crosshair crosshair-two">+</div><img className="hero-product" src="/hero-seal-02.png" width="1766" height="891" alt="Illustrative pair of precision metal and carbon seal rings" /><div className="visual-label"><span className="label-line"></span><span>Precision in every edge.</span></div><div className="visual-bottom"><div><span className="mini-label">FEATURED CATEGORY</span><strong>Mechanical seals</strong></div><Link to="/products?category=mechanical" aria-label="Explore mechanical seals">↗</Link></div></div>
+</div>
+<div className="category-strip"><div className="container"><span>MADE FOR YOUR APPLICATION</span><Link to="/products?category=mechanical">Mechanical seals ↗</Link><Link to="/products?category=carbon">Carbon seals ↗</Link><Link to="/products?category=water">Water-pump seals ↗</Link><Link to="/products?category=automotive">Automotive seals ↗</Link></div></div>
+<section className="section container"><div className="section-heading"><div><p className="eyebrow">EXPLORE THE RANGE</p><h2>Small components.<br /><em>Essential performance.</em></h2></div><Link to="/products" className="text-link">View all products <span>↗</span></Link></div><ProductGrid products={products.slice(0, 4)} featured /></section>
+<section id="about-us" className="home-about"><div className="container about-teaser"><div><p className="eyebrow">THE PEOPLE BEHIND THE SEALS</p><h2>Finding the right fit.<br />Starting with <em>you.</em></h2></div><div><p>Every application starts with a different requirement. At Comet Seal House, the conversation starts with understanding yours.</p><Link to="/about-us" className="text-link">Get to know us <span>↗</span></Link></div></div></section>
+<section className="section container"><div className="section-heading"><div><p className="eyebrow">FROM REQUIREMENT TO SOLUTION</p><h2>A simpler way to<br />find your seal.</h2></div></div><div className="steps"><article><span>01</span><h3>Explore the range</h3><p>Start with a category or search by a model or application.</p></article><article><span>02</span><h3>Share your requirements</h3><p>Tell us the dimensions, material, and equipment you have in mind.</p></article><article><span>03</span><h3>Discuss the right fit</h3><p>Connect with the team to confirm suitability and availability.</p></article></div></section>
+
+</>
+);
