@@ -37,7 +37,6 @@ export const Footer = () => (
         </div>
         <div className="footer-bottom">
             <span>© {new Date().getFullYear()} Comet Seal House. All rights reserved.</span>
-            <span>Sample products · Confirm specifications with our team.</span>
             <Link to="/">Back to top ↑</Link>
         </div>
     </footer>

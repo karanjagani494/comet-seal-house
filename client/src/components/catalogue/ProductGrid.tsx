@@ -14,7 +14,7 @@ export const ProductGrid = ({ products, featured = false }: { products: Product[
                 </button>
                 <p className="card-category">{categoryName(product.category)}</p>
                 <h3><button type="button" className="text-link product-title" onClick={() => setSelected(product)}>{product.name}</button></h3>
-                <div className="card-meta"><span>Ø {product.size} mm · sample</span><button type="button" className="card-details" onClick={() => setSelected(product)}>View details ↗</button></div>
+                <div className="card-meta"><span>Ø {product.size} mm</span><button type="button" className="card-details" onClick={() => setSelected(product)}>View details <span aria-hidden="true">↗</span></button></div>
             </article>)}
         </div>
         {selected && <ProductDialog product={selected} onClose={() => setSelected(null)} />}

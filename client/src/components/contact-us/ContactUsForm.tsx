@@ -16,7 +16,6 @@ export const ContactUsForm = ({ product }: { product?: Product }) => {
             "Name: " + value("firstName") + " " + value("lastName"),
             "Email: " + value("email"), "Phone: " + value("phone"),
             "Role: " + value("role"), "Product / requirement: " + value("product"),
-            ...(product ? ["Note: this enquiry references a fictional demo model."] : []),
             "", value("message"),
         ].join("\n");
         window.location.href = "mailto:cometseals@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
@@ -33,7 +32,6 @@ export const ContactUsForm = ({ product }: { product?: Product }) => {
             ].map(({ label, ...field }) => <label key={field.name} htmlFor={field.name}>{label} *<input {...field} id={field.name} required maxLength={field.type === "tel" ? 30 : 150} /></label>)}
         </div>
         <label htmlFor="product">Product / requirement<input id="product" name="product" defaultValue={product ? product.code + " — " + product.name : ""} maxLength={150} placeholder="Model number or application" /></label>
-        {product && <p className="demo-note">This is a fictional demo product. Its specifications are illustrative.</p>}
         <label htmlFor="topic">Choose topic *<select id="topic" name="topic" defaultValue="Enquiry" required>
             {["Enquiry", "Complaint", "Business Proposal", "Suggestion", "Other"].map(topic => <option key={topic}>{topic}</option>)}
         </select></label>
