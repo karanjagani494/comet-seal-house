@@ -1,0 +1,1613 @@
+
+.comet-site {
+    --ink: #28354f;
+    --orange: #ee6c4d;
+    --paper: #fff;
+    --soft: #f4f5f5;
+    --line: #dfe3e6;
+    --muted: #68717e;
+    --primary: oklch(.338 .0589 267.5867)
+}
+.comet-site * {
+    box-sizing: border-box
+}
+html {
+    scroll-behavior: smooth
+}
+.comet-site {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "DM Sans",Arial,sans-serif;
+    font-size: 15px;
+    line-height: 1.6
+}
+.comet-site button,.comet-site input,.comet-site select,.comet-site textarea {
+    font: inherit
+}
+.comet-site button,.comet-site a,.comet-site input,.comet-site select,.comet-site textarea {
+    -webkit-tap-highlight-color: transparent
+}
+.comet-site button,.comet-site a {
+    touch-action: manipulation
+}
+.comet-site button {
+    cursor: pointer
+}
+.comet-site a {
+    color: inherit;
+    text-decoration: none
+}
+.comet-site button {
+    color: inherit
+}
+.comet-site img {
+    max-width: 100%;
+    display: block
+}
+.comet-site h1,.comet-site h2,.comet-site h3,.comet-site p {
+    margin: 0
+}
+.comet-site h1,.comet-site h2,.comet-site h3 {
+    font-family: Manrope,Arial,sans-serif;
+    letter-spacing: -.055em
+}
+.comet-site h1 {
+    font-size: clamp(46px,5.3vw,76px);
+    font-weight: 650;
+    line-height: 1.08
+}
+.comet-site h2 {
+    font-size: clamp(32px,3.2vw,46px);
+    font-weight: 600;
+    line-height: 1.15
+}
+.comet-site h3 {
+    letter-spacing: -.025em
+}
+.comet-site em {
+    color: var(--orange);
+    font-style: normal
+}
+.comet-site button {
+    border: 0
+}
+.comet-site a:focus-visible,.comet-site button:focus-visible,.comet-site input:focus-visible,.comet-site select:focus-visible,.comet-site textarea:focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 5px
+}
+.comet-site input,.comet-site select,.comet-site textarea {
+    min-width: 0
+}
+.comet-site [hidden] {
+    display: none!important
+}
+.comet-site .container {
+    width: min(1280px,calc(100% - 112px));
+    margin-inline: auto
+}
+.comet-site .concept-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 8px 20px;
+    background: var(--ink);
+    color: #fff;
+    font-size: 10px;
+    letter-spacing: .07em
+}
+.comet-site .concept-dot {
+    width: 5px;
+    height: 5px;
+    background: var(--orange);
+    border-radius: 50%
+}
+.comet-site .bar-divider {
+    opacity: .4;
+    margin: 0 6px
+}
+.comet-site .header {
+    border-bottom: 1px solid var(--line);
+    background: #fff
+}
+.comet-site .header-inner {
+    height: 94px;
+    display: flex;
+    align-items: center;
+    gap: 48px
+}
+.comet-site .brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0
+}
+.comet-site .brand img {
+    width: 112px;
+    height: auto
+}
+.comet-site .brand>span {
+    font-size: 9px;
+    letter-spacing: .38em;
+    margin-left: 5px;
+    margin-top: -2px;
+    font-weight: 600
+}
+.comet-site .desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    margin-left: auto
+}
+.comet-site .desktop-nav>a {
+    font-size: 13px;
+    position: relative;
+    padding: 34px 0
+}
+.comet-site .desktop-nav>a.active:after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    background: var(--orange);
+    bottom: 21px;
+    left: 0;
+    width: 20px
+}
+.comet-site .nav-count {
+    font-size: 9px;
+    vertical-align: super;
+    color: var(--muted);
+    margin-left: 3px
+}
+.comet-site .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 14px 22px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    line-height: 1.5;
+    white-space: nowrap
+}
+.comet-site .button.primary {
+    background: var(--primary);
+    color: #fff
+}
+.comet-site .button.primary:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    background: var(--orange);
+    transition: width .45s,height .45s
+}
+.comet-site .button.primary:hover:before,.comet-site .button.primary:focus-visible:before {
+    width: 450px;
+    height: 450px
+}
+.comet-site .button span {
+    font-size: 20px;
+    line-height: 1
+}
+.comet-site .button.light {
+    background: #fff;
+    color: var(--ink)
+}
+.comet-site .button.light:hover {
+    background: #f7dfd9
+}
+.comet-site .text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 12px;
+    font-weight: 600;
+    background: none;
+    padding: 0
+}
+.comet-site .text-link:hover {
+    color: var(--orange)
+}
+.comet-site .text-link span {
+    font-size: 21px;
+    font-weight: 400
+}
+.comet-site .menu-toggle {
+    display: none;
+    background: none;
+    font-size: 24px;
+    padding: 8px
+}
+.comet-site .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    padding-block: 64px 68px
+}
+.comet-site .eyebrow {
+    font-size: 10px;
+    letter-spacing: .17em;
+    font-weight: 650;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 24px
+}
+.comet-site .eyebrow>span:empty {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--orange)
+}
+.comet-site .hero h1 {
+    margin-bottom: 25px
+}
+.comet-site .hero-description {
+    max-width: 390px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9
+}
+.comet-site .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-top: 30px
+}
+.comet-site .hero-footnote {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 38px;
+    font-size: 10px;
+    color: var(--muted);
+    line-height: 1.8
+}
+.comet-site .hero-footnote strong {
+    font-weight: 500;
+    color: var(--ink)
+}
+.comet-site .small-cross {
+    font-size: 34px;
+    color: var(--orange)
+}
+.comet-site .hero-visual {
+    min-width: 0;
+    min-height: 505px;
+    background: var(--soft);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 40px 15px;
+    overflow: hidden
+}
+.comet-site .visual-top,.comet-site .visual-bottom {
+    position: absolute;
+    left: 26px;
+    right: 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2
+}
+.comet-site .visual-top {
+    top: 24px;
+    font-size: 8px;
+    letter-spacing: .08em;
+    color: var(--muted)
+}
+.comet-site .hero-product {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 22px 15px #24334d20);
+    transform: rotate(-7deg)
+}
+.comet-site .orbit {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border: 1px solid #28354f0f;
+    border-radius: 50%;
+    left: 50%;
+    top: 49%;
+    transform: translate(-50%,-50%)
+}
+.comet-site .orbit-two {
+    width: 460px;
+    height: 460px
+}
+.comet-site .crosshair {
+    position: absolute;
+    color: #a5aeb8;
+    font-size: 18px
+}
+.comet-site .crosshair-one {
+    left: 25px;
+    top: 95px
+}
+.comet-site .crosshair-two {
+    right: 25px;
+    bottom: 100px
+}
+.comet-site .visual-label {
+    position: absolute;
+    top: 73%;
+    left: 35px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+    color: var(--muted)
+}
+.comet-site .label-line {
+    width: 30px;
+    height: 1px;
+    background: var(--orange)
+}
+.comet-site .visual-bottom {
+    bottom: 24px
+}
+.comet-site .visual-bottom>div {
+    display: grid;
+    gap: 3px
+}
+.comet-site .mini-label {
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: .15em;
+    color: var(--muted)
+}
+.comet-site .visual-bottom strong {
+    font-size: 13px;
+    font-weight: 500
+}
+.comet-site .visual-bottom>a {
+    border: 1px solid var(--line);
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    font-size: 21px;
+    background: #fff
+}
+.comet-site .category-strip {
+    border-block: 1px solid var(--line)
+}
+.comet-site .category-strip>.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    min-height: 78px
+}
+.comet-site .category-strip span {
+    font-size: 8px;
+    letter-spacing: .11em;
+    color: var(--muted);
+    max-width: 110px
+}
+.comet-site .category-strip a {
+    font-size: 11px;
+    white-space: nowrap
+}
+.comet-site .category-strip a:hover {
+    color: var(--orange)
+}
+.comet-site .section {
+    padding-block: 82px
+}
+.comet-site .section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 38px
+}
+.comet-site .section-heading .eyebrow {
+    margin-bottom: 16px
+}
+.comet-site .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 28px 20px
+}
+.comet-site .featured-grid {
+    grid-template-columns: repeat(4,minmax(0,1fr))
+}
+.comet-site .product-card {
+    min-width: 0
+}
+.comet-site .product-image {
+    background: #f2f3f3;
+    aspect-ratio: 1.18;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    border: 1px solid transparent
+}
+.comet-site .product-image:hover {
+    border-color: #c7ced5
+}
+.comet-site .product-picture {
+    position: absolute;
+    inset: 12%;
+    background-image: url("/product-illustrations.png");
+    background-size: 200% 200%;
+    background-repeat: no-repeat;
+    transition: transform .35s
+}
+.comet-site .product-image:hover .product-picture {
+    transform: scale(1.06)
+}
+.comet-site .product-image .product-picture {
+    inset: 12% 16%
+}
+.comet-site .product-picture.pic-0 {
+    background-position: 0 0
+}
+.comet-site .product-picture.pic-1 {
+    background-position: 100% 0
+}
+.comet-site .product-picture.pic-2 {
+    background-position: 0 100%
+}
+.comet-site .product-picture.pic-3 {
+    background-position: 100% 100%
+}
+.comet-site .card-code {
+    position: absolute;
+    top: 12px;
+    left: 14px;
+    font-family: monospace;
+    font-size: 9px;
+    color: var(--muted)
+}
+.comet-site .card-arrow {
+    position: absolute;
+    right: 12px;
+    bottom: 10px;
+    font-size: 20px
+}
+.comet-site .card-category {
+    font-size: 8px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 17px
+}
+.comet-site .product-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 3px;
+    line-height: 1.5
+}
+.comet-site .card-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 10px;
+    border-top: 1px solid var(--line);
+    padding-top: 10px;
+    margin-top: 10px
+}
+.comet-site .home-about {
+    background: #f4f5f5;
+    padding-block: 60px
+}
+.comet-site .about-teaser {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 80px;
+    align-items: center
+}
+.comet-site .about-teaser p:not(.eyebrow) {
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--muted);
+    max-width: 400px;
+    margin-bottom: 20px
+}
+.comet-site .steps {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px
+}
+.comet-site .steps article {
+    border-top: 1px solid var(--line);
+    padding-top: 20px
+}
+.comet-site .steps article>span {
+    font-size: 12px;
+    color: var(--orange)
+}
+.comet-site .steps h3 {
+    font-size: 19px;
+    margin-block: 20px 10px
+}
+.comet-site .steps p {
+    color: var(--muted);
+    font-size: 12px;
+    max-width: 300px
+}
+.comet-site .cta-section {
+    background: var(--ink);
+    color: #fff;
+    padding-block: 56px
+}
+.comet-site .cta-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px
+}
+.comet-site .cta-inner .eyebrow {
+    color: #c4cad4;
+    margin-bottom: 17px
+}
+.comet-site .cta-inner h2 {
+    font-size: 36px
+}
+.comet-site .footer {
+    padding-top: 48px
+}
+.comet-site .footer-top {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr;
+    gap: 35px;
+    padding-bottom: 42px;
+    align-items: start
+}
+.comet-site .footer-top>.brand {
+    justify-self: start
+}
+.comet-site .footer-top p {
+    font-size: 12px;
+    color: var(--muted)
+}
+.comet-site .footer-top>div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 11px
+}
+.comet-site .footer-top .mini-label {
+    margin-bottom: 5px
+}
+.comet-site .footer-bottom {
+    border-top: 1px solid var(--line);
+    padding-block: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 9px;
+    color: var(--muted)
+}
+.comet-site .page-intro {
+    padding-block: 25px 42px
+}
+.comet-site .breadcrumb {
+    font-size: 10px;
+    color: var(--muted);
+    margin-bottom: 40px
+}
+.comet-site .breadcrumb a {
+    color: var(--ink);
+    margin-right: 10px
+}
+.comet-site .intro-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: end
+}
+.comet-site .intro-row h1 {
+    font-size: clamp(42px,4.6vw,65px)
+}
+.comet-site .intro-row>p {
+    font-size: 12px;
+    line-height: 1.9;
+    color: var(--muted);
+    max-width: 320px;
+    padding-bottom: 8px
+}
+.comet-site .page-intro .eyebrow {
+    margin-bottom: 18px
+}
+.comet-site .demo-note {
+    font-size: 10px;
+    color: var(--muted);
+    display: flex;
+    gap: 10px;
+    margin-top: 30px
+}
+.comet-site .demo-note>span {
+    color: var(--orange)
+}
+.comet-site .catalogue {
+    display: grid;
+    grid-template-columns: 205px minmax(0,1fr);
+    gap: 45px;
+    padding-bottom: 80px
+}
+.comet-site .catalogue-sidebar {
+    padding-top: 4px
+}
+.comet-site .catalogue-sidebar>h2 {
+    font-family: "DM Sans",sans-serif;
+    letter-spacing: 0;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 20px
+}
+.comet-site .category-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+}
+.comet-site .category-filters button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 12px 14px;
+    background: none;
+    font-size: 11px;
+    border-radius: 3px
+}
+.comet-site .category-filters button>span {
+    font-size: 9px;
+    color: var(--muted)
+}
+.comet-site .category-filters button.active {
+    background: var(--ink);
+    color: #fff
+}
+.comet-site .category-filters button.active>span {
+    color: #d0d6df
+}
+.comet-site .category-filters button:not(.active):hover {
+    background: var(--soft)
+}
+.comet-site .sidebar-help {
+    margin-top: 42px;
+    border-top: 1px solid var(--line);
+    padding-top: 23px
+}
+.comet-site .help-icon {
+    font-size: 30px;
+    color: var(--orange)
+}
+.comet-site .sidebar-help h3 {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-block: 12px
+}
+.comet-site .sidebar-help p {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 20px
+}
+.comet-site .catalogue-toolbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px
+}
+.comet-site .search {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--line);
+    padding: 10px 14px;
+    gap: 10px;
+    flex: 1
+}
+.comet-site .search>span:first-child {
+    font-size: 23px;
+    line-height: 1
+}
+.comet-site .search input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    font-size: 11px;
+    background: none
+}
+.comet-site .search:focus-within {
+    border-color: var(--orange)
+}
+.comet-site .sort {
+    display: flex;
+    border: 1px solid var(--line);
+    padding-right: 10px
+}
+.comet-site .sort select {
+    background: none;
+    border: 0;
+    font-size: 10px;
+    padding: 10px;
+    max-width: 170px
+}
+.comet-site .results-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-block: 23px 18px;
+    font-size: 10px;
+    color: var(--muted)
+}
+.comet-site .results-row>span:last-child {
+    font-size: 7px;
+    letter-spacing: .08em
+}
+.comet-site .catalogue-note {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 24px 0;
+    border-block: 1px solid var(--line);
+    margin-top: 40px
+}
+.comet-site .catalogue-note>span {
+    font-size: 32px;
+    color: var(--orange)
+}
+.comet-site .catalogue-note>p {
+    font-size: 11px;
+    color: var(--muted)
+}
+.comet-site .catalogue-note strong {
+    color: var(--ink);
+    font-weight: 500
+}
+.comet-site .catalogue-note>button {
+    margin-left: auto;
+    font-size: 10px
+}
+.comet-site .about-lead {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.9;
+    margin-top: 25px
+}
+.comet-site .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    padding-top: 15px
+}
+.comet-site .story-visual {
+    background: var(--soft);
+    min-height: 410px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 40px 15px
+}
+.comet-site .story-visual img {
+    filter: drop-shadow(0 20px 10px #28354f14);
+    transform: rotate(-7deg)
+}
+.comet-site .story-label {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    font-size: 8px;
+    letter-spacing: .1em;
+    color: var(--muted)
+}
+.comet-site .story-caption {
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8px;
+    letter-spacing: .08em
+}
+.comet-site .story-copy h2 {
+    margin-bottom: 25px
+}
+.comet-site .story-copy p:not(.eyebrow) {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.9;
+    margin-bottom: 18px
+}
+.comet-site .story-copy .text-link {
+    margin-top: 12px
+}
+.comet-site .section-aside {
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.9
+}
+.comet-site .values {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px
+}
+.comet-site .values article {
+    border-top: 1px solid var(--line);
+    padding-top: 20px
+}
+.comet-site .value-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+.comet-site .value-top>span:first-child {
+    font-size: 10px;
+    color: var(--muted)
+}
+.comet-site .value-top>span:last-child {
+    font-size: 30px;
+    color: var(--orange)
+}
+.comet-site .values h3 {
+    font-size: 20px;
+    margin-block: 26px 13px
+}
+.comet-site .values p {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.9
+}
+.comet-site .applications {
+    background: var(--soft);
+    padding-block: 65px
+}
+.comet-site .application-list {
+    margin-top: 35px
+}
+.comet-site .application-list>div {
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    border-top: 1px solid #d6dbe0;
+    padding-block: 24px
+}
+.comet-site .application-list>div:last-child {
+    border-bottom: 1px solid #d6dbe0
+}
+.comet-site .application-list h3 {
+    font-size: 22px;
+    font-weight: 500
+}
+.comet-site .application-list span:first-child {
+    font-size: 10px;
+    color: var(--orange)
+}
+.comet-site .application-list span:last-child {
+    font-size: 11px;
+    color: var(--muted);
+    text-align: right
+}
+.comet-site dialog {
+    border: 0;
+    border-radius: 8px;
+    padding: 40px;
+    width: min(530px,calc(100% - 30px));
+    max-height: 90dvh;
+    color: var(--ink);
+    box-shadow: 0 30px 100px #0002
+}
+.comet-site dialog::backdrop {
+    background: #1c293dc9;
+    backdrop-filter: blur(5px)
+}
+.comet-site .dialog-close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background: none;
+    font-size: 28px;
+    padding: 5px 10px;
+    z-index: 3
+}
+.comet-site .dialog-intro {
+    color: var(--muted);
+    font-size: 12px;
+    margin-block: 18px 22px
+}
+.comet-site form {
+    display: grid;
+    gap: 14px
+}
+.comet-site form>label {
+    font-size: 11px;
+    font-weight: 500;
+    display: grid;
+    gap: 6px
+}
+.comet-site form input,.comet-site form textarea {
+    font-size: 13px;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    resize: vertical;
+    width: 100%
+}
+.comet-site form>.button {
+    margin-top: 5px
+}
+.comet-site #enquiry-status {
+    font-size: 12px;
+    color: var(--ink)
+}
+.comet-site .product-dialog {
+    width: min(800px,calc(100% - 30px));
+    padding: 0
+}
+.comet-site .detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr
+}
+.comet-site .detail-image {
+    position: relative;
+    min-height: 380px;
+    background: var(--soft)
+}
+.comet-site .detail-image .product-picture {
+    inset: auto 12%;
+    top: 50%;
+    aspect-ratio: 1;
+    transform: translateY(-50%)
+}
+.comet-site .detail-copy {
+    padding: 48px 30px 35px
+}
+.comet-site .detail-copy h2 {
+    font-size: 30px;
+    margin-block: 10px 15px
+}
+.comet-site .detail-copy>p {
+    font-size: 12px;
+    color: var(--muted)
+}
+.comet-site .detail-copy dl {
+    margin-block: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 11px;
+    gap: 0
+}
+.comet-site .detail-copy dt,.comet-site .detail-copy dd {
+    margin: 0;
+    border-top: 1px solid var(--line);
+    padding-block: 10px
+}
+.comet-site .detail-copy dt {
+    color: var(--muted)
+}
+.comet-site .detail-copy dd {
+    text-align: right
+}
+.comet-site .detail-copy .button {
+    width: 100%
+}
+.comet-site .detail-demo {
+    margin-top: 15px;
+    font-size: 9px!important
+}
+.comet-site #empty-state {
+    padding: 60px 20px;
+    text-align: center;
+    background: var(--soft)
+}
+.comet-site #empty-state p {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 10px 0 20px
+}
+.comet-site .sr-only,.comet-site .skip {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0)
+}
+.comet-site .skip:focus {
+    position: relative;
+    display: block;
+    width: auto;
+    height: auto;
+    clip: auto;
+    padding: 10px;
+    background: var(--ink);
+    color: #fff
+}
+.comet-site #mobile-menu {
+    padding: 10px 25px 25px;
+    border-top: 1px solid var(--line)
+}
+.comet-site #mobile-menu a {
+    display: block;
+    padding: 10px 0;
+    font-size: 14px
+}
+.comet-site #mobile-menu .button {
+    margin-top: 12px;
+    width: 100%
+}
+@media(min-width:1600px) {
+    .comet-site .hero {
+        padding-block: 85px
+    }
+    .comet-site .hero-visual {
+        min-height: 560px
+    }
+    .comet-site .hero h1 {
+        font-size: 80px
+    }
+}
+@media(max-width:1100px) {
+    .comet-site .container {
+        width: calc(100% - 64px)
+    }
+    .comet-site .hero {
+        gap: 28px
+    }
+    .comet-site .hero-visual {
+        min-height: 430px
+    }
+    .comet-site .featured-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr))
+    }
+    .comet-site .catalogue {
+        grid-template-columns: 175px minmax(0,1fr);
+        gap: 28px
+    }
+    .comet-site .catalogue-main>.product-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr))
+    }
+    .comet-site .story-grid {
+        gap: 40px
+    }
+    .comet-site .footer-top {
+        grid-template-columns: 1fr 1fr
+    }
+    .comet-site .category-strip>.container {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding-block: 20px;
+        gap: 20px 35px
+    }
+    .comet-site .category-strip span {
+        max-width: none;
+        flex-basis: 100%
+    }
+}
+@media(max-width:767px) {
+    .comet-site .container {
+        width: calc(100% - 40px)
+    }
+    .comet-site .concept-bar {
+        font-size: 8px;
+        gap: 6px;
+        line-height: 1.6;
+        text-align: center;
+        flex-wrap: wrap
+    }
+    .comet-site .bar-divider {
+        display: none
+    }
+    .comet-site .concept-dot {
+        flex-shrink: 0
+    }
+    .comet-site .header-inner {
+        height: 78px;
+        gap: 20px
+    }
+    .comet-site .brand img {
+        width: 100px
+    }
+    .comet-site .brand>span {
+        font-size: 8px
+    }
+    .comet-site .desktop-nav {
+        display: none
+    }
+    .comet-site .contact-nav {
+        margin-left: auto;
+        padding: 10px 16px;
+        gap: 15px;
+        font-size: 11px
+    }
+    .comet-site .menu-toggle {
+        display: block
+    }
+    .comet-site .hero {
+        grid-template-columns: 1fr;
+        padding-block: 40px;
+        gap: 35px
+    }
+    .comet-site .hero h1 {
+        font-size: 56px;
+        line-height: 1.06
+    }
+    .comet-site .hero-description {
+        max-width: 480px
+    }
+    .comet-site .hero-visual {
+        min-height: 400px
+    }
+    .comet-site .hero-product {
+        width: min(100%,550px);
+        margin: auto
+    }
+    .comet-site .hero-footnote {
+        margin-top: 25px
+    }
+    .comet-site .eyebrow {
+        font-size: 9px;
+        margin-bottom: 20px
+    }
+    .comet-site .section {
+        padding-block: 52px
+    }
+    .comet-site .section-heading {
+        align-items: start
+    }
+    .comet-site .section-heading h2 {
+        font-size: 32px
+    }
+    .comet-site .section-heading>.text-link {
+        font-size: 10px;
+        gap: 8px;
+        white-space: nowrap;
+        margin-top: 25px
+    }
+    .comet-site .product-grid,.comet-site .featured-grid {
+        gap: 25px 15px;
+        grid-template-columns: repeat(2,minmax(0,1fr))
+    }
+    .comet-site .product-card h3 {
+        font-size: 14px
+    }
+    .comet-site .card-meta {
+        font-size: 9px;
+        flex-wrap: wrap
+    }
+    .comet-site .card-category {
+        font-size: 7px
+    }
+    .comet-site .card-code {
+        font-size: 8px
+    }
+    .comet-site .about-teaser {
+        grid-template-columns: 1fr;
+        gap: 24px
+    }
+    .comet-site .home-about {
+        padding-block: 40px
+    }
+    .comet-site .steps {
+        grid-template-columns: 1fr;
+        gap: 28px
+    }
+    .comet-site .steps h3 {
+        margin-top: 12px
+    }
+    .comet-site .steps p {
+        max-width: none
+    }
+    .comet-site .cta-inner {
+        align-items: start;
+        flex-direction: column
+    }
+    .comet-site .cta-inner h2 {
+        font-size: 32px
+    }
+    .comet-site .cta-section {
+        padding-block: 42px
+    }
+    .comet-site .footer-top {
+        gap: 30px 20px
+    }
+    .comet-site .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        padding-block: 20px
+    }
+    .comet-site .page-intro {
+        padding-bottom: 30px
+    }
+    .comet-site .breadcrumb {
+        margin-bottom: 30px
+    }
+    .comet-site .intro-row {
+        flex-direction: column;
+        align-items: start;
+        gap: 22px
+    }
+    .comet-site .intro-row h1,.comet-site .page-intro h1 {
+        font-size: 46px
+    }
+    .comet-site .intro-row>p {
+        padding: 0
+    }
+    .comet-site .demo-note {
+        font-size: 9px
+    }
+    .comet-site .catalogue {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding-bottom: 45px
+    }
+    .comet-site .catalogue-sidebar>h2 {
+        font-size: 11px;
+        margin-bottom: 10px
+    }
+    .comet-site .category-filters {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 7px
+    }
+    .comet-site .category-filters button {
+        width: auto;
+        padding: 9px 12px;
+        background: var(--soft);
+        gap: 12px;
+        font-size: 10px
+    }
+    .comet-site .sidebar-help {
+        display: none
+    }
+    .comet-site .catalogue-toolbar {
+        flex-wrap: wrap
+    }
+    .comet-site .search {
+        flex-basis: 100%;
+        padding: 12px
+    }
+    .comet-site .sort {
+        margin-left: auto
+    }
+    .comet-site .results-row {
+        margin-top: 15px
+    }
+    .comet-site .results-row>span:last-child {
+        font-size: 6px
+    }
+    .comet-site .catalogue-note {
+        flex-wrap: wrap
+    }
+    .comet-site .catalogue-note>button {
+        margin-left: 50px
+    }
+    .comet-site .story-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding-top: 0
+    }
+    .comet-site .story-visual {
+        min-height: 320px
+    }
+    .comet-site .story-copy h2 {
+        font-size: 34px
+    }
+    .comet-site .about-lead {
+        font-size: 13px
+    }
+    .comet-site .section-aside {
+        display: none
+    }
+    .comet-site .values {
+        grid-template-columns: 1fr;
+        gap: 25px
+    }
+    .comet-site .values h3 {
+        margin-top: 10px
+    }
+    .comet-site .application-list>div {
+        grid-template-columns: 25px 1fr;
+        gap: 10px
+    }
+    .comet-site .application-list span:last-child {
+        grid-column: 2;
+        text-align: left
+    }
+    .comet-site .application-list h3 {
+        font-size: 19px
+    }
+    .comet-site .applications {
+        padding-block: 45px
+    }
+    .comet-site .detail-grid {
+        grid-template-columns: 1fr
+    }
+    .comet-site .detail-image {
+        min-height: 240px
+    }
+    .comet-site .detail-image .product-picture {
+        width: 210px;
+        left: 50%;
+        right: auto;
+        transform: translate(-50%,-50%)
+    }
+    .comet-site .detail-copy {
+        padding: 28px
+    }
+    .comet-site .product-dialog {
+        max-width: 450px
+    }
+    .comet-site .detail-copy dl {
+        margin-block: 18px
+    }
+    .comet-site .product-dialog .dialog-close {
+        background: #ffffffbd;
+        border-radius: 50%
+    }
+    .comet-site .dialog-intro {
+        font-size: 11px
+    }
+    .comet-site dialog {
+        padding: 32px 24px
+    }
+}
+@media(max-width:380px) {
+    .comet-site .hero h1 {
+        font-size: 47px
+    }
+    .comet-site .hero-visual {
+        min-height: 320px
+    }
+    .comet-site .product-grid,.comet-site .featured-grid,.comet-site .catalogue-main>.product-grid {
+        grid-template-columns: 1fr
+    }
+    .comet-site .hero-actions {
+        gap: 20px
+    }
+    .comet-site .footer-top {
+        grid-template-columns: 1fr
+    }
+    .comet-site .concept-bar {
+        font-size: 7px
+    }
+    .comet-site .header-inner {
+        gap: 10px
+    }
+    .comet-site .button {
+        gap: 20px
+    }
+    .comet-site .card-meta {
+        font-size: 10px
+    }
+}
+@media(prefers-reduced-motion:reduce) {
+    html {
+        scroll-behavior: auto
+    }
+    .comet-site *,.comet-site *:before,.comet-site *:after {
+        transition: none!important;
+        animation: none!important
+    }
+}
+/* Integration with the existing React application. */
+.comet-site * {
+    font-family: inherit;
+    line-height: inherit;
+}
+.comet-site :is(h1, h2, h3) {
+    font-family: Manrope, Arial, sans-serif;
+}
+.comet-site #main-content {
+    min-height: 60vh;
+}
+.comet-site .header-inner > div:first-child {
+    flex-shrink: 0;
+}
+.comet-site .contact-nav {
+    flex-shrink: 0;
+}
+.comet-site .product-title {
+    font-size: inherit;
+    text-align: left;
+    line-height: 1.5;
+}
+.comet-site .card-details {
+    padding: 0;
+    background: none;
+    color: inherit;
+    font-size: inherit;
+    white-space: nowrap;
+}
+.comet-site .card-details:hover {
+    color: var(--orange);
+}
+.comet-site .catalogue-note > a {
+    margin-left: auto;
+    font-size: 10px;
+}
+.comet-site .empty-state {
+    padding: 60px 20px;
+    text-align: center;
+    background: var(--soft);
+}
+.comet-site .empty-state p {
+    margin: 10px 0 20px;
+    color: var(--muted);
+    font-size: 12px;
+}
+.comet-site .contact-page {
+    padding-block: 25px 70px;
+}
+.comet-site .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 85px;
+    align-items: start;
+}
+.comet-site .contact-copy h1 {
+    font-size: clamp(42px, 4.6vw, 65px);
+}
+.comet-site .contact-details {
+    margin-top: 35px;
+    display: grid;
+    gap: 18px;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 1.8;
+    color: var(--muted);
+}
+.comet-site .contact-details > div {
+    display: flex;
+    gap: 12px;
+    align-items: start;
+}
+.comet-site .contact-details svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: var(--orange);
+}
+.comet-site .contact-details a {
+    overflow-wrap: anywhere;
+}
+.comet-site .contact-details a:hover {
+    color: var(--orange);
+}
+.comet-site .contact-form {
+    gap: 20px;
+}
+.comet-site .contact-form .dialog-intro {
+    margin: 0 0 5px;
+}
+.comet-site .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+.comet-site .form-grid > label {
+    display: grid;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 500;
+}
+.comet-site .contact-form select {
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: 10px 12px;
+    background: white;
+    font-size: 13px;
+}
+.comet-site .contact-form fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+}
+.comet-site .contact-form legend {
+    margin-bottom: 10px;
+    font-size: 11px;
+    font-weight: 500;
+}
+.comet-site .role-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+}
+.comet-site .role-options label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+}
+.comet-site .role-options input {
+    width: 15px;
+    height: 15px;
+    accent-color: var(--orange);
+}
+.comet-site .contact-form .demo-note {
+    margin: -8px 0 0;
+}
+.comet-site .form-status {
+    font-size: 12px;
+    line-height: 1.8;
+}
+@media (min-width: 768px) {
+    .comet-site #mobile-menu {
+        display: none !important;
+    }
+}
+@media (max-width: 767px) {
+    .comet-site .contact-nav {
+        margin-left: auto;
+        padding: 0;
+    }
+    .comet-site .contact-nav a {
+        padding: 10px 16px;
+    }
+    .comet-site .contact-nav a > span:last-child {
+        font-size: 11px;
+    }
+    .comet-site .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+    .comet-site .contact-page {
+        padding-bottom: 45px;
+    }
+    .comet-site .catalogue-note > a {
+        margin-left: 50px;
+    }
+    .comet-site .contact-form input,
+    .comet-site .contact-form textarea,
+    .comet-site .contact-form select,
+    .comet-site .search input {
+        font-size: 16px;
+    }
+}
+@media (max-width: 420px) {
+    .comet-site .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* Keep the real business information visible throughout the website. */
+.comet-site .business-footer { grid-template-columns: 1fr .65fr 1.15fr 1.6fr; gap: 30px; }
+.comet-site .footer-brand { align-items: flex-start; gap: 18px; }
+.comet-site .footer-business-details > a,
+.comet-site .footer-business-details > p,
+.comet-site .footer-location address { display: flex; align-items: flex-start; gap: 9px; font-size: 11px; color: var(--muted); line-height: 1.9; font-style: normal; }
+.comet-site .footer-business-details svg,
+.comet-site .footer-location svg { flex-shrink: 0; margin-top: 3px; }
+.comet-site .footer-business-details span,
+.comet-site .footer-location address a { overflow-wrap: anywhere; }
+.comet-site .footer-business-details strong { font-weight: 500; color: var(--ink); }
+.comet-site .footer-business-details a:hover,
+.comet-site .footer-location a:hover { color: var(--orange); }
+.comet-site .footer-map-link { margin-top: 5px; margin-left: 25px; text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 1100px) {
+    .comet-site .business-footer { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 540px) {
+    .comet-site .business-footer { grid-template-columns: 1fr; gap: 28px; }
+}
+
+.comet-site .animated-button {
+    color: #fff;
+}
+.comet-site .animated-button:hover {
+    color: var(--ink);
+}
