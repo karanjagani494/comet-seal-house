@@ -1581,3 +1581,71 @@ html {
     .comet-site .visual-top, .comet-site .story-caption { letter-spacing: .03em; }
 }
 
+
+/* Contact fields share the catalogue filter treatment. */
+.comet-site .select-menu { position: relative; min-width: 0; }
+.comet-site .contact-form { gap: 22px; }
+.comet-site .contact-form > label,
+.comet-site .contact-form .form-grid > label { gap: 8px; font-size: 12px; font-weight: 600; }
+.comet-site .contact-form .form-control {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    min-height: 58px;
+    padding: 14px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    transition: border-color .2s, box-shadow .2s;
+}
+.comet-site .contact-form .form-control > svg { flex-shrink: 0; color: var(--muted); transition: color .2s; }
+.comet-site .contact-form .form-control:hover { border-color: #b7bfca; }
+.comet-site .contact-form .form-control:focus-within { border-color: var(--orange); box-shadow: 0 0 0 3px #ee6c4d12; }
+.comet-site .contact-form .form-control:focus-within > svg { color: var(--orange); }
+.comet-site .contact-form .form-control input,
+.comet-site .contact-form .form-control textarea {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+.comet-site .contact-form .form-control input::placeholder,
+.comet-site .contact-form .form-control textarea::placeholder { color: var(--muted); opacity: .85; }
+.comet-site .contact-form .form-control input:autofill { border-radius: 4px; }
+.comet-site .contact-form .form-message { align-items: flex-start; }
+.comet-site .contact-form .form-message > svg { margin-top: 3px; }
+.comet-site .contact-form .form-message textarea { min-height: 132px; resize: vertical; }
+.comet-site .contact-select .sort-trigger { min-height: 64px; }
+.comet-site .contact-select .sort-options { width: 100%; }
+.comet-site .contact-form legend { font-size: 12px; font-weight: 600; margin-bottom: 10px; }
+.comet-site .contact-form .role-options { display: flex; flex-wrap: wrap; gap: 10px; }
+.comet-site .contact-form .role-options label {
+    flex: 1 1 125px;
+    min-height: 48px;
+    padding: 12px;
+    gap: 8px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color .2s, background .2s, box-shadow .2s;
+}
+.comet-site .contact-form .role-options input { flex: 0 0 16px; width: 16px; height: 16px; padding: 0; margin: 0; border: 0; box-shadow: none; }
+.comet-site .contact-form .role-options label:hover { border-color: var(--orange); }
+.comet-site .contact-form .role-options label:has(input:checked) { border-color: var(--orange); background: #ee6c4d0a; }
+.comet-site .contact-form .role-options label:has(input:focus-visible) { border-color: var(--orange); box-shadow: 0 0 0 3px #ee6c4d12; }
+.comet-site .contact-form .button { min-height: 52px; }
+@media (max-width: 767px) {
+    .comet-site .contact-form .form-control input,
+    .comet-site .contact-form .form-control textarea { font-size: 16px; }
+}
