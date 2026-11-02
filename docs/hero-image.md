@@ -2,9 +2,9 @@
 
 Generated with the built-in image_gen tool on 2026-11-02.
 
-Reference: client/public/hero-seal-01.png (retained).
+Reference: the original gallery cutout (available in Git history).
 Output: client/public/hero-seal-02.png (1766 x 891 RGBA PNG).
-Consumer: client/src/pages/sections/Home.tsx.
+Consumers: client/src/pages/LandingPage.tsx and client/src/pages/AboutUs.tsx.
 
 This is an AI recreation for presentation, rather than a verified technical product photograph. Confirm product geometry before using it in a specification sheet.
 

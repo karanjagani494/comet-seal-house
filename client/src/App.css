@@ -86,27 +86,6 @@ html {
     width: min(1280px,calc(100% - 112px));
     margin-inline: auto
 }
-.comet-site .concept-bar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 8px 20px;
-    background: var(--ink);
-    color: #fff;
-    font-size: 10px;
-    letter-spacing: .07em
-}
-.comet-site .concept-dot {
-    width: 5px;
-    height: 5px;
-    background: var(--orange);
-    border-radius: 50%
-}
-.comet-site .bar-divider {
-    opacity: .4;
-    margin: 0 6px
-}
 .comet-site .header {
     border-bottom: 1px solid var(--line);
     background: #fff
@@ -573,9 +552,6 @@ html {
     padding-bottom: 42px;
     align-items: start
 }
-.comet-site .footer-top>.brand {
-    justify-self: start
-}
 .comet-site .footer-top p {
     font-size: 12px;
     color: var(--muted)
@@ -948,10 +924,6 @@ html {
 .comet-site form>.button {
     margin-top: 5px
 }
-.comet-site #enquiry-status {
-    font-size: 12px;
-    color: var(--ink)
-}
 .comet-site .product-dialog {
     width: min(800px,calc(100% - 30px));
     padding: 0
@@ -1006,16 +978,6 @@ html {
 .comet-site .detail-demo {
     margin-top: 15px;
     font-size: 9px!important
-}
-.comet-site #empty-state {
-    padding: 60px 20px;
-    text-align: center;
-    background: var(--soft)
-}
-.comet-site #empty-state p {
-    font-size: 12px;
-    color: var(--muted);
-    margin: 10px 0 20px
 }
 .comet-site .sr-only,.comet-site .skip {
     position: absolute;
@@ -1098,19 +1060,6 @@ html {
 @media(max-width:767px) {
     .comet-site .container {
         width: calc(100% - 40px)
-    }
-    .comet-site .concept-bar {
-        font-size: 8px;
-        gap: 6px;
-        line-height: 1.6;
-        text-align: center;
-        flex-wrap: wrap
-    }
-    .comet-site .bar-divider {
-        display: none
-    }
-    .comet-site .concept-dot {
-        flex-shrink: 0
     }
     .comet-site .header-inner {
         height: 78px;
@@ -1378,9 +1327,6 @@ html {
     }
     .comet-site .footer-top {
         grid-template-columns: 1fr
-    }
-    .comet-site .concept-bar {
-        font-size: 7px
     }
     .comet-site .header-inner {
         gap: 10px
